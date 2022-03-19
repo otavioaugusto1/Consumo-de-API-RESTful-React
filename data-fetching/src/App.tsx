@@ -13,11 +13,19 @@ function App() {
     .then(data => {
       setRepositorios(data)
     })
-  })
+  },[])
 
   return (
     <div className="App">
-      <h1>Hello, world!</h1>
+      <ul>
+        {repositorios.map(repo => {
+          return(
+            <li key={repo.nickname}>
+              <strong>{repo.description}</strong>
+            </li>
+          )
+        })}
+      </ul>
     </div>
   )
 }
