@@ -16,17 +16,16 @@ function App() {
   },[])
 
   return (
-    <div className="App">
       <ul>
         {repositorios.map(repo => {
           return(
             <li key={repo.nickname}>
-              <strong>{repo.description}</strong>
+              <strong>{repo.nickname}</strong>
+              <p>{repo.description}</p>
             </li>
           )
         })}
       </ul>
-    </div>
   )
 }
 
